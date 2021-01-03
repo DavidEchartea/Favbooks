@@ -1,0 +1,21 @@
+.main-header{
+    background: url(../../../assets/img/banner.jpg);
+    background-size: cover;
+    min-height: 210px;
+    position: relative;
+}
+.background-overlay{
+    background-color: rgba(64, 115, 158,0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.opt-header{
+    background: url(../../../assets/img/opt-header.jpg);
+    background-size: cover;
+    min-height: 100px;
+    position: relative;
+}

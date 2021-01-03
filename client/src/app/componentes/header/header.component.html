@@ -1,0 +1,24 @@
+<!--HEADER-->
+<!--HEADER sin identidad-->
+<header class="main-header" *ngIf="!identity">
+    <div class="background-overlay text-white py-5">
+        <div class="container">
+            <div class="row justify-content-center align-self-center">
+            <div class="col-md-6 text-center">
+                <h1>Bienvenido a FavBooks!</h1>
+                <h6>Donde puedes buscar, agregar tus libros favoritos y tus libros pendientes por leer!</h6>
+            </div>
+            </div>
+        </div>
+    </div>
+</header>
+<header class="opt-header" *ngIf="identity">
+    <div class="background-overlay text-white py-4">
+        <div class="container">
+            <div class="row justify-content-center align-self-center">
+            <div class="col-md-6 text-center">
+            </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,34 @@
+<div class="container">
+    <h2 class="text-center text-white">{{title}}</h2>
+    <div class="row justify-content-center div-form">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 div-margin">
+            <div class="text-center">
+                <img src="{{url + 'get-user-image/'}}{{identity.image}}" class="img-user">
+            </div>
+            <form #userUpdateForm = "ngForm" (ngSubmit)="onSubmit()">
+                <p>
+                    <label class="text-white">Nombre: </label>
+                    <input type="text" #name = "ngModel" name="name" [(ngModel)]="user.name" class="form-control" required>
+                </p>
+
+                <p>
+                    <label class="text-white">Apellidos: </label>
+                    <input type="text" #surname = "ngModel" name="surname" [(ngModel)]="user.surname" class="form-control" required>
+                </p>
+
+                <p>
+                    <label class="text-white">Email: </label>
+                    <input type="email" #email = "ngModel" name="email" [(ngModel)]="user.email" class="form-control" required> 
+                </p>
+                <br>
+                <label class="text-white">Sube tu foto</label>
+                <br>
+                <input type="file" placeholder="Subir imagen..." (change)="fileChangeEvent($event)" class="form-control-file" class="text-white">
+                <div class="text-center mt-3">
+                    <input type="submit" class="btn btn-success" value="Actualizar datos">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,33 @@
+.team {
+    background: #353b48; /*Color de fondo de section team y footer */
+}
+/*Libros */
+.book-img{
+    width: 150px;
+    height: 250;
+}
+.book-list{
+    margin: 0px;
+    padding-bottom: 25px;
+    margin-top: 5px;
+    display: inline-block;
+}
+.img-book{
+    width: 100%;
+    height: 280px;
+}
+.card-book{
+    background: #dcdde1; /*Color de fondo de cards */
+}
+.container-fluid .card .card-body{
+    width: 238px;
+    height: 140px;
+    box-sizing: border-box;
+}
+@media(max-width: 575px){
+    .img-book{
+        width: 75%;
+        height: 350px;
+        align-self: center;
+    }
+}

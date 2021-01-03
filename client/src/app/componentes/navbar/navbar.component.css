@@ -1,0 +1,9 @@
+.img-user{
+    background: #eee;
+    border-radius: 30px;
+    height: 28px;
+    width: 28px;
+    margin: 0px auto;
+    margin-top: 8px;
+    overflow: hidden;
+}

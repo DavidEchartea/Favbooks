@@ -1,0 +1,50 @@
+<!--Features-->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center text-white">Libros Favoritos de la gente</h2>
+        <br>
+        <ul class="book-list container-fluid">
+            <li *ngFor = "let book of books" class="col-xs-6 col-sm-6 col-md-4 col-lg-3 book-list">
+                <div class="card card-book">
+                    <img class="card img-book" src="{{book.image}}">
+                    <div class="card-body">
+                        <h5>{{book.title}}</h5>
+                        <h6>{{book.author}}</h6>
+                        <p>{{book.year}}</p>
+                    </div>
+                </div>
+            </li>
+    </ul>
+    </div>
+</section>
+
+
+<!--Team-->
+<section class="text-center team">
+    <div class="container p-5">
+        <div class="row justify-content-center">
+        <!-- USER TEAM -->
+            <div class="col-lg-3">
+                <div class="card">
+                <div class="card-body">
+                <img src="../assets/img/person.jpg" class="img-fluid rounded-circle w-50">
+                <h3>David Peña</h3>
+                <p style="text-align: justify;">
+                    Ingeniero en Sistemas Computacionales, egresado del Instituto Tecnologico de Saltillo.
+                </p>
+                <p style="text-align: justify;">Novato en el desarrollo web.</p>
+                <div class="text-center">
+                    <h5>Contacto</h5>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="p-4">
+                        <a href="mailto:dechartea@hotmail.com"> <img src="../assets/img/email.png" alt="instragram-logo"></a>
+                        </div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

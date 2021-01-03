@@ -1,0 +1,41 @@
+<form [formGroup]="formulario" (ngSubmit)="searchBooks()" *ngIf="identity">
+    <div class="container justify-content-center">
+        <div class="input-group mb-1">
+            <input type="text" class="form-control" placeholder="Busca tu libro aqui..." formControlName="libro">
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-primary">Buscar...</button>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="img-background">
+<div class="col-12 mt-2" *ngIf="libros">
+    <div class="row">
+        <div *ngFor="let libro of libros.items" class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3 mt-3">
+            <div class="text-center">
+                <img *ngIf="libro.volumeInfo.imageLinks; else elseBlock" src="{{libro.volumeInfo.imageLinks.thumbnail}}" >
+                <ng-template #elseBlock> <img src="../../assets/img/not-found.jpg" class="text-center img-book"></ng-template>
+                <div class="justify-content-center input-group-append">
+                    <label class="text-white">Titulo:&nbsp;</label> <p class="text-white">{{libro.volumeInfo.title}}</p>
+                </div>
+                <div class="justify-content-center input-group-append">
+                    <label class="text-white">Autor(s):&nbsp; </label><p class="text-white">{{libro.volumeInfo.authors}}</p>
+                </div>
+                <div class="justify-content-center input-group-append">
+                    <label class="text-white">Fecha de publicacion:&nbsp;</label><p class="text-white"> {{libro.volumeInfo.publishedDate}}</p>
+                </div>
+            </div>
+            <p *ngIf="libro.searchInfo; else elseBlockSnippet" class="text-white" hidden>{{libro.searchInfo.textSnippet}}</p>
+            <ng-template #elseBlockSnippet> <p hidden>Descripcion no disponible</p> </ng-template>
+            <div  class="text-center">
+                <button class="btn btn-danger btn-sm mr-1 mb-2" (click)="addFavBook(libro)">Favoritos <span><img src="../../../assets/img/favoritos.png" alt=""></span></button>
+                <button class="btn btn-success btn-sm mr-1 mb-2"(click)="addPendBook(libro)">Pendientes <span><img src="../../../assets/img/pendiente.png" alt=""></span></button>
+            </div>
+            <div class="text-center">
+                <a class="btn btn-info btn-sm mr-1" href="{{libro.volumeInfo.infoLink}}" target="_blank">Saber mas...</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<app-footer></app-footer>

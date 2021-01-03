@@ -1,0 +1,12 @@
+.img-book{
+    height: 200px;
+    width: 128px;
+}
+.searchbar{
+    display: inline;
+}
+.img-background{
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(47, 54, 64,0.80),rgba(53, 59, 72,1)), url('../../../assets/img/book-background.jpg');
+    background-repeat: repeat; 
+}
